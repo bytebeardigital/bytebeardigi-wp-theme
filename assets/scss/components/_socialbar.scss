@@ -1,0 +1,21 @@
+.socialbar {
+    &__vert{
+        flex-direction: column;
+        @include mobile {
+            flex-direction: row;
+        }
+        .social-link {
+            justify-content: center;
+            margin-bottom: 10px;
+            align-items: center;
+            .icon {
+                margin: 0 auto;
+                text-align: center;
+                svg {
+                 width: 20px;
+                 height: 20px;
+                }
+            }
+        }
+    }
+}

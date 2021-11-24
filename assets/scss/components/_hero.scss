@@ -1,0 +1,60 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $body;
+    &__size{
+        &--small{
+            height: 300px;
+        }
+        &--medium{
+            height: 500px;
+            @include mobile {
+                height: 450px;
+            }
+        }
+        &--large{
+            height: 800px;
+        }
+    }
+    &__direction {
+        &--center {
+            text-align: center;
+        }
+        &--left {
+            text-align: left;
+        }
+        &--right {
+            text-align: right;
+        }
+    }
+    &__theme {
+        &--light{
+            color: $black;
+        }
+        &--dark {
+            color: $white;
+        }
+    }
+    .slogan {
+        @include font-size(22px);
+        margin-top: 75px;
+        letter-spacing: 3px;
+    }
+    &--heading {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        @include font-size(20px);
+    }
+    &__title {
+        text-transform: inherit;
+        line-height: 1em;
+        letter-spacing: 0px !important;
+        width: 90%;
+        @include font-size(61.04px)
+    }
+
+    &__mini {
+    }
+}

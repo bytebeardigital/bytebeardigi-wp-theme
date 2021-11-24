@@ -1,0 +1,130 @@
+.byte-nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    @include phone {
+        padding: 0rem;
+    }
+
+    //Nav Wrapper
+    &__inner-wrapper {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__brand-link {
+        padding: 0;
+        margin-right: 1rem;
+        text-decoration: none;
+        white-space: nowrap;
+        &--brand-logo{
+            &:focus-visible{
+                outline: none;
+        border: 2px solid black;
+        border-radius: 4px;
+            }
+        }
+        @include mobile {
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        &:focus-visible{
+            outline: none;
+    border: 2px solid black;
+    border-radius: 4px;
+        }
+        
+    }
+
+
+    &__menu {
+        @include phone {
+            background-color: $dark;
+        transition: all 1s ease-in-out;
+        height: 50vh;
+        }
+        &--wrapper{
+            width: 100%;
+            margin-bottom: .5rem;
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+            flex-direction: row;
+            @include tablet {
+                margin-bottom: 0 !important;
+            }
+        }
+        &--item{
+            justify-content: end;
+            @include phone {
+                padding: 10px;
+            }
+            .nav-link {
+                color: $black;
+                font-weight: $book;
+                &:hover {
+                    font-weight: $bold;
+                    text-decoration: none;
+                }
+                @include phone {
+                   color: $white;
+                transition: all 1s ease-in-out;
+                }
+            }
+        }
+    }
+    //Bootstrap fixes
+    &.navbar-expand-md{
+        @include mobile {
+            .byte-nav__toggler {
+                display: block;
+            }
+            .byte-nav__menu--wrapper{flex-direction: column;}
+        }
+    // @include mobile {
+    //     .byte-nav__toggler{
+    //         display: none;
+    //     }
+    // }
+}
+    //Nav Button Icon
+    &__toggler {
+        margin-right: 10px;
+        padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    display: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+        &--icon {
+            display: inline-block;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            border: none;
+            outline: none;
+            &:focus-visible,
+            &:focus{
+                @include no-focus
+            }
+        }
+        i {
+            vertical-align: middle;
+            @include font-size(35px);
+            
+        }
+        &:focus-visible{
+            outline: none;
+            border: none;
+        }
+    }
+}

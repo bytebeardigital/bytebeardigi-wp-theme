@@ -1,0 +1,13 @@
+.slider {
+    .service__slide {
+        margin-top: 25px;
+        &--img {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto;
+        }
+        &--content {
+            font-size: 14px;
+        }
+    }
+}

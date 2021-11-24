@@ -1,0 +1,17 @@
+.project__card{
+    &--link,
+    &--title{
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &--title{
+        font-size: 20px;
+        color: $black;
+        text-transform: capitalize;
+    }
+    &--meta {
+        padding: 15px 0 0 0;
+    }
+}
