@@ -13,7 +13,6 @@ $subtext = $hero['content'];
 $size = $hero['size'];
 $theme = $hero['theme'];
 
-pr($subtext);
 $dark_gradient = "linear-gradient(rgba(33, 45, 64, .80), rgba(33, 45, 64, .80))";
 $light_gradient = "linear-gradient(rgba(236, 232, 232, .75), rgba( 236, 232, 232, .75))";
 
