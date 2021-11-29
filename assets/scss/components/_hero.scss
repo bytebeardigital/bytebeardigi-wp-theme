@@ -51,7 +51,7 @@
             width: 100%;
             overflow: hidden;
 
-            video {
+            &--wrapper {
                 min-width: 100%;
                 max-width: 100%;
 
@@ -59,11 +59,10 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-
-                .hero__content {
-                    z-index: 1000;
-                    border: 1px solid red;
-                }
+            }
+            .hero__content {
+                z-index: 1000;
+                border: 1px solid red;
             }
         }
     }

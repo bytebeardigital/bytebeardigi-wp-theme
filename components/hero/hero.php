@@ -37,7 +37,7 @@ if ($hero) : ?>
 
                                                                                                     ?>>
     <?php if ($theme === 'video') : ?>
-    <video autoplay muted loop>
+    <video class="hero__theme--video--wrapper" autoplay muted loop>
         <source src="<?php echo $hero['video_file']; ?>">
         </source>
     </video>
