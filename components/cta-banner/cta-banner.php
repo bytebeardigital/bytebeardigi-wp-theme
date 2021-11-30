@@ -25,7 +25,6 @@ if ($banner) : ?>
     <div class="cta__banner--container container inner">
         <div class="cta__banner--content">
             <?php echo $content; ?>
-            <p><?php echo $cta_button['url']; ?></p>
         </div>
 
     </div>
