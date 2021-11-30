@@ -82,6 +82,10 @@
   color: $black;
 }
 
+.secondary-theme {
+  background-color: $secondary;
+}
+
 .dark-theme {
   background-color: $black;
   color: $white;
@@ -107,7 +111,7 @@
     width: 100%;
     position: relative;
     margin-top: 5px;
-    border-bottom: 5px solid $primary;
+    border-bottom: 5px solid $primaryLight;
 }
 &--light{
   color: $white;

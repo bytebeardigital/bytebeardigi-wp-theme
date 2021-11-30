@@ -1,26 +1,40 @@
 .cta {
     &__footer {
         margin-top: 50px;
-        background-color: $accent;
+        background-color: $black;
         padding: 30px 0 30px 0;
-        &-form {
+        form {
             padding: 30px 50px 30px 50px;
-            form {
-                color: $black;
-                label {
-                    font-weight: 600;
-                }
-                input,
+            color: $white !important;
+            label {
+                font-weight: 600;
+            }
+            input,
                 select,
                 textarea {
                     border: none;
                     border-radius: 0px;
                 }
-            }
         }
     }
     &__banner{
         margin-top: 50px;
         margin-bottom: 75px;
+        position: relative;
+    }
+}
+
+.cta__banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &--video {
+        position: absolute;
+        min-width: 100%;
+        max-width: 100%;
+        z-index: -10;
+    }
+    &--content {
+        z-index: 50;
     }
 }

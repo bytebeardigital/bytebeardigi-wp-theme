@@ -9,16 +9,26 @@ if (is_home()) {
 $theme = $banner['theme'];
 $content = $banner['content'];
 
-if($banner): ?>
+$videoTheme = $theme == 'video';
+$video = $banner['background_video'];
+if ($banner) : ?>
 
-<div class="cta wrapper <?php echo $theme; ?>-theme" >
-    <div class="cta__banner container inner">
+
+<div class="cta__banner wrapper <?php echo $theme; ?>-theme">
+
+    <?php if ($videoTheme) : ?>
+    <video class="cta__banner--video" autoplay muted loop>
+        <source src="<?php echo $video; ?>">
+        </source>
+    </video>
+    <?php endif; ?>
+    <div class="cta__banner--container container inner">
         <div class="cta__banner--content">
             <?php echo $content; ?>
             <p><?php echo $cta_button['url']; ?></p>
         </div>
-        
+
     </div>
 </div>
 
-<?php endif;?>
+<?php endif; ?>
