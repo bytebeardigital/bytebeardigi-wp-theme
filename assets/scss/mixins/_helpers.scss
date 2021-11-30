@@ -83,7 +83,10 @@
 }
 
 .secondary-theme {
-  background-color: $secondary;
+  background-color: #8EC5FC;
+  color: $white;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #d9b4fd 49%, #97d9e1 90%);
+
 }
 
 .dark-theme {
@@ -109,9 +112,10 @@
     position: relative;
     display: block;
     width: 100%;
-    position: relative;
-    margin-top: 5px;
-    border-bottom: 5px solid $primaryLight;
+    margin-top: 2px;
+    height: 5px;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #d9b4fd 49%, #97d9e1 90%);
+
 }
 &--light{
   color: $white;

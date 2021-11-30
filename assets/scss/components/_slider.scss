@@ -1,4 +1,5 @@
 .slider {
+    margin: 25px auto 40px auto;
     .service__slide {
         margin-top: 25px;
         &--img {
@@ -7,7 +8,8 @@
             margin: 0 auto;
         }
         &--content {
-            font-size: 14px;
+            font-size: 1rem;
+            line-height: 1.75rem;
         }
     }
 }

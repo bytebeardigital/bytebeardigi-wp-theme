@@ -60,6 +60,9 @@
             }
             .hero__content {
                 z-index: 1000;
+                h1 {
+                    color: $white;
+                }
             }
         }
     }
