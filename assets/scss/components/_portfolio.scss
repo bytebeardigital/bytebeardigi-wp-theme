@@ -43,4 +43,334 @@
             
         }
     }
+
+    &-filter {
+        &__grid{
+            .project{
+                &--inner {
+                    position: relative;
+                    color: $white;
+                    transition: all .2s ease-in-out;
+                }
+                &--img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .project-title {
+                    opacity: 0;
+                    transition: all .2s ease-in-out;
+                    position: absolute;
+                    color: $white;
+                    width: 280px;
+                    bottom: 8px;
+                    padding: 10px;
+                    background-color: $black;
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $white;
+                    transform: scale(1.1);
+                    .project-title {
+                        opacity: 1;
+                    }
+                    
+                }
+
+            }
+        }
+    }
 }
+/**************************
+  Menu Grid
+**************************/
+.grid-filter {
+    margin-bottom: 20px;
+  }
+  .grid-filter ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .grid-filter ul li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .grid-filter ul li a {
+    text-decoration: none !important;
+    font-weight: 300 !important;
+  }
+  .grid-filter ul li a.selected {
+    font-weight: 700 !important;
+  }
+  
+  .drinks-container {
+    margin-bottom: 50px;
+      text-align: center;
+  }
+  
+  /* ---- grid ---- */
+  .grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .grid-sizer {
+    width: 48%;
+  }
+  
+  .gutter-sizer {
+    width: 2%;
+  }
+  
+  /* ---- .grid-item ---- */
+  .grid-item {
+    width: 32%;
+    overflow: hidden;
+  }
+  
+  select.filter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(https://5five.bar/staging/wp-content/uploads/2020/02/select-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    position: relative;
+    color: #767472 !important;
+    background-color: #fff !important;
+    border-radius: 5px;
+    min-width: 180px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    margin: 5px 0;
+    justify-content: center;
+    border: 2px solid #767472;
+    font-size: 16px;
+  }
+  
+  .grid-item:hover {
+    cursor: pointer;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .drink-front-img {
+    text-align: center;
+  }
+  .drink-front-img img {
+    width: auto;
+    height: 300px !important;
+  }
+  
+  .drink-front-name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+  }
+  .drink-front-name h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+  .drink-front-name p {
+    margin: 10px 0 0;
+    color: #767472;
+  }
+  .drink-front-name span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #767472;
+  }
+  
+  .page-template-page-template-drinks .grid-item {
+    width: 25%;
+  }
+  @media only screen and (max-width: 900px) {
+    .page-template-page-template-drinks .grid-item {
+      width: 31% !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .page-template-page-template-drinks .grid-item {
+      width: 48% !important;
+    }
+  }
+  /* ---- .grid-item.gigante ---- */
+  .grid-item.gigante:after {
+    position: absolute;
+    content: "";
+    width: 116%;
+    height: 80px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+    z-index: 20;
+    bottom: -50px;
+    left: -14%;
+  }
+  
+  .grid-item.gigante {
+    width: 99% !important;
+    background-color: #E1DFE0;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    padding: 30px 50px 50px 50px;
+    -webkit-transform: skewY(1.5deg);
+    transform: skewY(1.5deg);
+    overflow: hidden;
+  }
+  .grid-item.gigante .drink-front {
+    display: none;
+  }
+  .grid-item.gigante .drink-content {
+    display: block;
+    -webkit-transform: skewY(-1.5deg);
+    transform: skewY(-1.5deg);
+    padding-bottom: 30px;
+  }
+  .grid-item.gigante .drink-content .drink-content-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--image {
+    width: 300px;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--image img {
+    max-height: 450px;
+    width: auto;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content {
+    width: calc(100% - 300px);
+    padding-left: 50px;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content h3 {
+    margin-bottom: 5px;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content span {
+    color: #767472;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content .prices span:first-child {
+    margin-right: 30px;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content ul {
+    padding-left: 20px;
+    column-count: 2;
+  }
+  .grid-item.gigante .drink-content .drink-content-main .drink-content-main--content ul li {
+    padding: 0;
+    margin: 5px 0 !important;
+  }
+  
+  .drink-content {
+    display: none;
+  }
+  
+  /* Close Button */
+  .grid-item.gigante .drink-content .close-button {
+    width: 100%;
+    display: inline;
+  }
+  
+  .close-button button:hover {
+    cursor: pointer;
+  }
+  
+  .close-button button {
+    font-size: 30px;
+    border: none;
+    font-weight: 700;
+    background: none;
+    color: darkgray;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .grid-item {
+      width: 49%;
+      overflow: hidden;
+    }
+  
+    .drink-content-main--content {
+      width: calc(100% - 200px) !important;
+      padding-left: 30px !important;
+    }
+    .drink-content-main--content ul {
+      padding-left: 20px;
+      column-count: 1 !important;
+    }
+  
+    .drink-content-main--image {
+      width: 200px !important;
+    }
+    .drink-content-main--image img {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .drink-front-img {
+      text-align: center;
+    }
+    .drink-front-img img {
+      width: auto;
+      height: 200px !important;
+    }
+  
+    .drink-content-main--content {
+      width: calc(100% - 200px) !important;
+      padding-left: 0px !important;
+    }
+    .drink-content-main--content ul {
+      padding-left: 20px;
+      column-count: 1 !important;
+    }
+  
+    .drink-content-main--image img {
+      height: 200px !important;
+      width: auto !important;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 30px;
+    }
+  
+    .grid-item.gigante .drink-content .drink-content-main {
+      flex-wrap: wrap;
+    }
+  
+    .grid-item.gigante {
+      padding: 30px 15px !important;
+    }
+  
+    .grid-item.gigante .drink-content .drink-content-main div {
+      width: 100% !important;
+    }
+  }

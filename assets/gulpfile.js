@@ -24,6 +24,8 @@ const srcJsDir = 'js';
 const srcJsFiles = [
     //`./node_modules/babel-polyfill/dist/polyfill.js`,
     `${srcJsDir}/scripts/base.js`,
+    `${srcJsDir}/scripts/common.js`,
+
 ];
 const destCss = 'css';
 const destJs = 'js';

@@ -25,7 +25,7 @@ component('hero'); ?>
 <?php
 
 component('service-slider');
-component('portfolio-slider');
+component('FILTER-PORTFOLIO');
 component('cta-banner');
 component('footer-cta');
 get_footer();
