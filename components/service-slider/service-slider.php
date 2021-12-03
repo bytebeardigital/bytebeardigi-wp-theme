@@ -19,7 +19,7 @@ $service_icon = get_field('service_icon');
             <div class="col-lg-10 service__slide--content">
 
                 <h4><?php the_title(); ?></h4>
-                <p><?php the_excerpt(); ?></p>
+                <p><?php the_content(); ?></p>
                 </p>
             </div>
         </div>

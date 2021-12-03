@@ -15,7 +15,10 @@ $global_email = get_field('global_email', 'options');
 
 </main>
 <footer class="footer">
+    <?php if (is_home()) : ?>
     <div class="spacer"></div>
+    <?php endif; ?>
+
     <div class="container">
         <div class="row">
             <div class="col-md-1 col-lg-2 col-xs-12 footer__logo">
