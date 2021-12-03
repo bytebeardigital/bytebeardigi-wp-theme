@@ -10,7 +10,7 @@
 
 $footer_logo = get_field('footer_logo', 'options');
 $global_phone = get_field('global_phone', 'options');
-$global_email = get_field('global_email', 'options');
+$global_email = get_field('site_email', 'options');
 ?>
 
 </main>
@@ -29,8 +29,8 @@ $global_email = get_field('global_email', 'options');
                 <h5 class="footer__title">Contact</h5>
                 <?php if (!empty($global_phone)) : ?> <p class="footer__link">phone: <a
                         href="tel:<?php echo $global_phone; ?>">248.574.4611</a></p><?php endif; ?>
-                <<p class="footer__link">email: <a
-                        href="info:<?php echo $global_email; ?>"><?php echo $global_email; ?></a></p>
+                <?php if (!empty($global_email)) : ?> <p class="footer__link">email: <a
+                        href="info:<?php echo $global_email; ?>"><?php echo $global_email; ?></a></p><?php endif; ?>
 
             </div>
             <div class="col-md-3 col-xs-12 footer__menu">
