@@ -28,7 +28,7 @@ component('service-slider');
 ?>
 <div class="spacer"></div>
 <?php
-component('FILTER-PORTFOLIO');
+component('filter-portfolio');
 component('cta-banner');
 component('footer-cta');
 get_footer();
