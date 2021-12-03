@@ -28,7 +28,7 @@ $global_email = get_field('global_email', 'options');
             <div class="col-md-4 col-xs-12 footer__contact">
                 <h5 class="footer__title">Contact</h5>
                 <?php if (!empty($global_phone)) : ?> <p class="footer__link">phone: <a
-                        href="tel:<?php echo $global_phone; ?>">1234567890</a></p><?php endif; ?>
+                        href="tel:<?php echo $global_phone; ?>">248.574.4611</a></p><?php endif; ?>
                 <?php if (!empty($global_email)) : ?> <p class="footer__link">email: <a
                         href="info:<?php echo $global_email; ?>"><?php echo $global_email; ?></a></p>
                 <?php endif; ?>
