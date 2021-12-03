@@ -32,8 +32,7 @@ $terms = get_terms('project_categories');
                 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
                             the_ID(); ?>
                 <?php
-                            pr(the_ID());
-                            $termsArray = get_the_terms($loop->ID, 'project_categories');
+                            $termsArray = get_the_terms(the_ID(), 'project_categories');
                             $termsString = "";
                             foreach ($termsArray as $term) {
                                 $termsString .= $term->slug . ' ';
