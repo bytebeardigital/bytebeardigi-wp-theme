@@ -29,8 +29,7 @@ $terms = get_terms('project_categories');
 
             <?php if ($loop) : ?>
             <div id="projectGrid" class="row">
-                <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-                            the_ID(); ?>
+                <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
                 <?php
                             $termsArray = get_the_terms(the_ID(), 'project_categories');
                             $termsString = "";
