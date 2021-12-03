@@ -22,7 +22,7 @@ $lightTheme = $theme == 'light';
 $darkTheme = $theme == 'dark';
 $videoTheme = $theme == 'video';
 if ($hero) : ?>
-    <div id="hero" class=" hero hero__size--<?php echo $size; ?> hero__theme--<?php echo $theme ?>" <?php
+<div id="hero" class=" hero hero__size--<?php echo $size; ?> hero__theme--<?php echo $theme ?>" <?php
                                                                                                     if ($noTheme) {
                                                                                                         echo 'no theme';
                                                                                                     } elseif ($darkTheme) {
@@ -34,19 +34,21 @@ if ($hero) : ?>
                                                                                                     }
 
                                                                                                     ?>>
-        <?php if ($theme === 'video') : ?>
-            <video class="hero__theme--video--wrapper" autoplay muted loop>
-                <source src="<?php echo $hero['video_file']; ?>">
-                </source>
-            </video>
+    <?php if ($theme === 'video') : ?>
+    <video class="hero__theme--video--wrapper" autoplay muted loop>
+        <source src="<?php echo $hero['video_file']; ?>">
+        </source>
+    </video>
+    <?php endif; ?>
+    <div class="container hero__content hero__direction--<?php echo $direction; ?>">
+        <span class="hero--heading"><?php echo $hero['heading']; ?></span>
+        <?php if (!empty($subtext)) : ?>
+        <h1 class="hero__title"><?php echo $subtext; ?></h1>
         <?php endif; ?>
-        <div class="container hero__content hero__direction--<?php echo $direction; ?>">
-            <span class="hero--heading"><?php echo $hero['heading']; ?></span>
-            <?php echo (!empty($subtext)) ? '<h1 class="hero__title">' . $subtext . '</h1>' : '' ?>
 
-            <?php if (is_home()) {
+        <?php if (is_home()) {
                 echo '<p class="slogan">Web Design + Development</p>';
             } ?>
-        </div>
     </div>
+</div>
 <?php endif; ?>
