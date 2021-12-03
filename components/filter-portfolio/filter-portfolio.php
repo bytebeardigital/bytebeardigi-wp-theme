@@ -1,13 +1,13 @@
 <?php
 
-$args = get_posts(array(
+$args = array(
     'post_type' => 'projects',
     'post_status' => 'publish',
     $categories = get_terms(array(
         'taxonomy' => 'project_categories',
     )),
     'posts_per_page' => 9
-));
+);
 
 $loop = new WP_Query($args);
 
@@ -29,7 +29,8 @@ $terms = get_terms('project_categories');
 
             <?php if ($loop) : ?>
             <div id="projectGrid" class="row">
-                <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+                <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
+                            the_ID(); ?>
                 <?php
                             $termsArray = get_the_terms($loop, 'project_categories');
                             $termsString = "";
